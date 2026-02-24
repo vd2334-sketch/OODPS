@@ -1,0 +1,24 @@
+#include<iostream>
+using namespace std;
+class Rectangle{
+	public:
+		int l,b,a;
+		Rectangle(int x,int y){
+			l=x;
+			b=y;
+		}
+		void area(){
+			a=l*b;
+		}
+		void display(){
+			cout<<"Length:"<<l<<endl;
+			cout<<"breadth:"<<b<<endl;
+			cout<<"Area:"<<a<<endl;
+		}
+};
+int main(){
+	Rectangle r(4,7);
+	r.area();
+	r.display();
+	return 0;
+}
