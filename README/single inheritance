@@ -1,0 +1,24 @@
+#include <iostream>
+using namesspace std;
+class animal
+{
+public:
+void eat()
+{
+cout<<"animal is eating.\n";
+}
+};
+class Dog : public animal
+{
+public:
+void bark()
+{
+cout<<"dog is barking.\n";
+}
+};
+int main ()
+{
+mydog.eat();
+my dog.bark();
+return 0;
+}
