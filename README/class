@@ -1,0 +1,45 @@
+#include <iostream>
+using namespace std;
+
+// Base class 1
+class Student {
+protected:
+    int roll;
+    string name;
+
+public:
+    void getStudent() {
+        cout << "Enter Roll Number: ";
+        cin >> roll;
+
+        cout << "Enter Name: ";
+        cin >> name;
+    }
+};
+class Sports {
+protected:
+    int sportsScore;
+public:
+    void getSports() {
+        cout << "Enter Sports Score: ";
+        cin >> sportsScore;
+    }
+};
+class Result : public Student, public Sports {
+public:
+    void display() {
+        cout << "\nStudent Details\n";
+        cout << "Roll Number: " << roll << endl;
+        cout << "Name: " << name << endl;
+        cout << "Sports Score: " << sportsScore << endl;
+    }
+};
+int main() {
+    Result r;
+    r.getStudent();  
+    r.getSports();    // from Sports class
+
+    r.display();
+
+    return 0;
+}
